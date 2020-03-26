@@ -1,0 +1,61 @@
+@import '~bootstrap';
+
+html, body {
+}
+
+.wrapper {
+  display: flex;
+  padding: 10px;
+
+  .sidebar {
+    width: 20%;
+  }
+
+  .grid {
+    flex: 1;
+  }
+}
+
+.show-answers .grid-item,
+.grid-item.show {
+  &.red {
+    background-color: red;
+  }
+}
+
+.show-answers .grid-item,
+.grid-item.show {
+  &.blue {
+    background-color: blue;
+  }
+}
+
+.show-answers .grid-item,
+.grid-item.show {
+  &.black {
+    background-color: black;
+    color: white;
+  }
+}
+
+.show-answers .grid-item,
+.grid-item.show {
+  &.white {
+    background-color: lightgray;
+  }
+}
+
+textarea {
+  width: 100%;
+  font-size: 12px;
+}
+
+.grid-item {
+  width: 19%;
+  margin: 10px .5%;
+  float: left;
+  border: solid 1px black;
+  padding: 10px;
+  line-height: 50px;
+  text-align: center;
+}

@@ -110,7 +110,7 @@ function randomizeAnswers() {
     shuffle(answers);
 }
 
-txtWords.onclick = function() {
+txtWords.onchange = function() {
     saveWords();
     populateGrid();
 };

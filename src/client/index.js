@@ -68,7 +68,7 @@ function selectSet() {
 function randomizeWords() {
     set1 = getSetSlice(english);
     populateSets();
-    txtWords.value = set1.words;
+    txtWords.value = set1.words.join("\n");
     saveWords();
 }
 

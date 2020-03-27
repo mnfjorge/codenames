@@ -110,6 +110,11 @@ function randomizeAnswers() {
     shuffle(answers);
 }
 
+txtWords.onclick = function() {
+    saveWords();
+    populateGrid();
+};
+
 btnRandomWords.onclick = function () {
     randomizeWords();
     saveWords();

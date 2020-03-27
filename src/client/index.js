@@ -60,13 +60,13 @@ function shuffle(array) {
 
 function selectSet() {
     const set = sets.find(s => s.name === ddSets.value);
-    txtWords.innerHTML = set.words.join("\n");
+    txtWords.value = set.words.join("\n");
 }
 
 function randomizeWords() {
-    let w = txtWords.innerHTML.split("\n");
+    let w = txtWords.value.split("\n");
     shuffle(w);
-    txtWords.innerHTML = w.join("\n");
+    txtWords.value = w.join("\n");
 }
 
 function loadAnswers() {
@@ -98,12 +98,12 @@ function saveReviewed() {
 function loadWords() {
     const localWords = localStorage.getItem('words');
     if (localWords) {
-        txtWords.innerHTML = localWords;
+        txtWords.value = localWords;
     }
 }
 
 function saveWords() {
-    localStorage.setItem('words', txtWords.innerHTML);
+    localStorage.setItem('words', txtWords.value);
 }
 
 function randomizeAnswers() {
@@ -168,7 +168,7 @@ function toggleGridItem() {
 
 function populateGrid() {
     grid.innerHTML = '';
-    const wordsForGrid = txtWords.innerHTML.split("\n");
+    const wordsForGrid = txtWords.value.split("\n");
     for (let i = 0; i < 25; i++) {
         const color = answers[i];
         const item = document.createElement('div');

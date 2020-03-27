@@ -1,8 +1,6 @@
 // import '~bootstrap';
 import './style.scss';
 
-const english = require('./sets/english');
-
 function getSetSlice(set) {
     const setWords = set.words;
     shuffle(setWords);
@@ -13,8 +11,12 @@ function getSetSlice(set) {
     }
 }
 
+const english = require('./sets/english');
+
+let set1 = getSetSlice(english);
+
 const sets = [
-    getSetSlice(english)
+    set1
 ];
 
 let answers = [
@@ -64,9 +66,10 @@ function selectSet() {
 }
 
 function randomizeWords() {
-    let w = txtWords.value.split("\n");
-    shuffle(w);
-    txtWords.value = w.join("\n");
+    set1 = getSetSlice(english);
+    populateSets();
+    txtWords.value = set1.words;
+    saveWords();
 }
 
 function loadAnswers() {
